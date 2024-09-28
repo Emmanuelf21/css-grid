@@ -62,14 +62,13 @@ h1{
     
     cursor: pointer;
 
-    transition: 1s;
 }
 
 h1:hover{
     background: linear-gradient(to right, rgb(18, 1, 255), rgb(1, 255, 166) 70%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transition: 1s;
+
 }
 
 .container{
@@ -110,13 +109,75 @@ h1:hover{
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    
+    width: 100%;
+    height: 100%;    
 }
 
 .imagens{
     width: 100%;
     height: 90%;
     border-radius: 20px;
+
+}
+.card {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative; /* Necessário para o SVG */
+    overflow: hidden; /* Evita que o SVG transborde */
+    transition: transform 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Estilos para o SVG */
+.card-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card rect {
+    fill: none;
+    stroke: #00b7ff; /* Cor inicial do contorno */
+    stroke-width: 5;
+    stroke-dasharray: 890, 0;
+    transition: all 0.5s cubic-bezier(0.62, 1, 0.75, 1);
+}
+
+.card-rb:hover rect {
+    stroke-width: 10;
+    stroke-dasharray: 120, 300;
+    stroke-dashoffset: 28;
+    stroke: url(#gradient1); /* Aplica o gradiente no hover */
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+}
+
+.card-w:hover rect {
+    stroke-width: 10;
+    stroke-dasharray: 120, 300;
+    stroke-dashoffset: 28;
+    stroke: url(#gradient2); /* Aplica o gradiente no hover */
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+}
+
+.card-mcl:hover rect {
+    stroke-width: 10;
+    stroke-dasharray: 120, 300;
+    stroke-dashoffset: 28;
+    stroke: url(#gradient3); /* Aplica o gradiente no hover */
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
+}
+
+.card-sf:hover rect {
+    stroke-width: 10;
+    stroke-dasharray: 120, 300;
+    stroke-dashoffset: 28;
+    stroke: url(#gradient4); /* Aplica o gradiente no hover */
+    transition: all 2s cubic-bezier(0.22, 1, 0.25, 1);
 }
 
 .footer {
@@ -159,9 +220,3 @@ h1:hover{
     height: 30px;
     cursor: pointer;
 }
-
-/* background-clip: text
-text-fill-color: transparent
-
-background-linear: gradient;
-display block */
