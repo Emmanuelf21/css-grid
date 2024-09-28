@@ -51,12 +51,25 @@ header{
 
 h1{
     display: flex;
-    justify-content: center;  
-    margin: 10px 0px 10px 0px;  
-    
-    background: linear-gradient(to right, rgb(255, 1, 1), orange);
+    justify-content: center; 
+    align-items: center;
+     width: fit-content;
+    margin: 10px auto 10px auto;  
+
+    background: linear-gradient(to right, rgb(255, 1, 1), orange 80%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+h1:hover{
+    background: linear-gradient(to right, rgb(18, 1, 255), rgb(1, 255, 166) 70%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: 1s;
 }
 
 .container{
@@ -82,6 +95,8 @@ h1{
     padding: 20px;
 }
 
+
+
 .container:nth-child(2) { grid-area: item1; }
 .container:nth-child(3) { grid-area: item2; }
 .container:nth-child(4) { grid-area: item3; }
@@ -94,13 +109,14 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+    
 }
 
 .imagens{
     width: 100%;
     height: 90%;
     border-radius: 20px;
-    position: relative;
 }
 
 .footer {
